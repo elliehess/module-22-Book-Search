@@ -17,6 +17,6 @@
   },
   "dependencies": {
     "apollo-server-express": "^2.15.0",
-    "react-spotify-auth": "^1.4.3"
+    "mongodb": "^5.4.0"
   }
 }
