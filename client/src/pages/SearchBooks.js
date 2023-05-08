@@ -79,8 +79,9 @@ const SearchBooks = () => {
 //keep mutation in try/catch 
     try {
       const { data } = await saveBook({
-        variables: { userId: Auth.getProfile().data._id, 
-          bookData: bookToSave }
+        variables: { 
+          userId: Auth.getProfile().data._id, 
+          book: bookToSave }
       });
       console.log(data)
 
