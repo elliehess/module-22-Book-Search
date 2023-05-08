@@ -24,9 +24,9 @@ This is a deployed book search engine that allows the user to search for new boo
 
 ## Installation
 
-npm i 
-npm build 
-npm run develop 
+npm i  
+npm build  
+npm run develop  
 
 ## Usage 
 
