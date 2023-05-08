@@ -1,7 +1,7 @@
 const { User } = require('../models');
 const { signToken } = require('../utils/auth');
 
-
+// followed user-controllers.js for guidance 
 const resolvers = {
     Query: {
 		user: async (parent, { userId }) => {
