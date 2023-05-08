@@ -40,10 +40,11 @@ N/A
 
 ## License
 
-Boost Software License 1.0
-Credits to PedroTech (Github: https://github.com/machadop1407)
-- for assitance in Deploying a React Portfolio
-https://react-icons.github.io/
+Boost Software License 1.0  
+Sources include:  
+Actvity 28 from Module 21  
+Stack Overflow for _typename and ...  
+GraphQL docs
 
 ## Badges
 
