@@ -16,7 +16,7 @@ This is a deployed book search engine that allows the user to search for new boo
 
 ## Visuals
 
-[Click here for the Deployed Application(https://shrouded-escarpment-76040.herokuapp.com/)
+[Click here for the Deployed Application](https://shrouded-escarpment-76040.herokuapp.com/)
 
 <img width="1436" alt="Screen Shot 2023-05-07 at 7 56 42 PM" src="https://user-images.githubusercontent.com/118075347/236724053-5e8b285e-4926-43c4-b84b-f260cefdc6e1.png">
 
