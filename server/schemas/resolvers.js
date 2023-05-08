@@ -1,27 +1,43 @@
 const { User } = require('../models');
+const { signToken } = require('../utils/auth');
+
 
 const resolvers = {
     Query: {
-      User: async () => {
-        return Tech.find({});
-      },
-      matchups: async (parent, { _id }) => {
-        const params = _id ? { _id } : {};
-        return Matchup.find(params);
-      },
-    },
+		user: async (parent, { userId }) => {
+			const foundUser = await User.findOne({ _id: userId });
+
+			if (!foundUser) {
+				throw new Error('No user found with that ID!');
+			}
+
+			return foundUser;
+		},
+	},
     Mutation: {
-      createMatchup: async (parent, args) => {
-        const matchup = await Matchup.create(args);
-        return matchup;
+      createUser: async (parent, {username, email, password}) => {
+        const user = await User.create({ username, email, password} );
+        const token = signToken(user);
+        return {token, user};
       },
-      createVote: async (parent, { _id, techNum }) => {
-        const vote = await Matchup.findOneAndUpdate(
-          { _id },
-          { $inc: { [`tech${techNum}_votes`]: 1 } },
-          { new: true }
-        );
-        return vote;
+      loginUser: async (parent, { email, password }) => {
+        const user = await User.findOne(
+          { email });
+          const token = signToken(user);
+        return {token, user};
+      },
+      saveBook: async (parent, { userId, bookData }) => {
+        const user = await User.findOneAndUpdate(
+          { _id: userId }, {$addToSet: {savedBooks: bookData}}, {new:true, runValidators: true}
+          );
+        return user;
+      },
+
+      deleteBook: async (parent, { userId, bookData }) => {
+        const user = await User.findOneAndUpdate(
+          { _id: userId }, {$pull: {savedBooks: bookData}}, {new: true}
+          );
+        return user;
       },
     },
   };
