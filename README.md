@@ -1,4 +1,4 @@
-# [![My Skills](https://skillicons.dev/icons?i=graphsql&perline=1)](https://skillicons.dev) Book Search Engine
+# [![My Skills](https://skillicons.dev/icons?i=graphql&perline=1)](https://skillicons.dev) Book Search Engine
 
 ## Description
 
