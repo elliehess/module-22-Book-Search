@@ -1,4 +1,4 @@
-# [![My Skills](https://skillicons.dev/icons?i=graphsql&perline=1)](https://skillicons.dev) Book Search Engine
+# [![My Skills](https://skillicons.dev/icons?i=graphql&perline=1)](https://skillicons.dev) Book Search Engine
 
 ## Description
 
@@ -16,7 +16,7 @@ This is a deployed book search engine that allows the user to search for new boo
 
 ## Visuals
 
-[Click here for the Deployed Portfolio](https://elliehess.github.io/React-Portfolio/)
+[Click here for the Deployed Application](https://shrouded-escarpment-76040.herokuapp.com/)
 
 <img width="1436" alt="Screen Shot 2023-05-07 at 7 56 42 PM" src="https://user-images.githubusercontent.com/118075347/236724053-5e8b285e-4926-43c4-b84b-f260cefdc6e1.png">
 
@@ -40,10 +40,11 @@ N/A
 
 ## License
 
-Boost Software License 1.0
-Credits to PedroTech (Github: https://github.com/machadop1407)
-- for assitance in Deploying a React Portfolio
-https://react-icons.github.io/
+Boost Software License 1.0  
+Sources include:  
+Actvity 28 from Module 21  
+Stack Overflow for _typename and ...  
+GraphQL docs
 
 ## Badges
 
