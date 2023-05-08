@@ -1,10 +1,12 @@
 const { User } = require('../models');
 const { signToken } = require('../utils/auth');
+const { AuthenticationError } = require('apollo-server-express');
+
 
 // followed user-controllers.js for guidance 
 const resolvers = {
     Query: {
-		user: async (parent, { userId }) => {
+		me: async (parent, { userId }) => {
 			const foundUser = await User.findOne({ _id: userId });
 
 			if (!foundUser) {
@@ -15,7 +17,7 @@ const resolvers = {
 		},
 	},
     Mutation: {
-      createUser: async (parent, {username, email, password}) => {
+      addUser: async (parent, {username, email, password}) => {
         const user = await User.create({ username, email, password} );
         const token = signToken(user);
         return {token, user};
@@ -23,6 +25,11 @@ const resolvers = {
       loginUser: async (parent, { email, password }) => {
         const user = await User.findOne(
           { email });
+          if (!user) throw new AuthenticationError('No profile found');
+
+          const correctPw = await user.isCorrectPassword(password)
+
+          if (!correctPw) throw new AuthenticationError('Incorrect password!');
           const token = signToken(user);
         return {token, user};
       },
@@ -33,7 +40,7 @@ const resolvers = {
         return user;
       },
 
-      deleteBook: async (parent, { userId, bookData }) => {
+      removeBook: async (parent, { userId, bookData }) => {
         const user = await User.findOneAndUpdate(
           { _id: userId }, {$pull: {savedBooks: bookData}}, {new: true}
           );
