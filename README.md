@@ -18,10 +18,9 @@ This is a deployed book search engine that allows the user to search for new boo
 
 [Click here for the Deployed Portfolio](https://elliehess.github.io/React-Portfolio/)
 
+<img width="1436" alt="Screen Shot 2023-05-07 at 7 56 42 PM" src="https://user-images.githubusercontent.com/118075347/236724053-5e8b285e-4926-43c4-b84b-f260cefdc6e1.png">
 
-![localhost_3001_](https://user-images.githubusercontent.com/118075347/235374146-408df0be-7c6e-4f1d-ae06-a3d9fafca87a.png)
-
-
+<img width="1413" alt="Screen Shot 2023-05-07 at 7 56 49 PM" src="https://user-images.githubusercontent.com/118075347/236724063-54b36ed5-8d1f-47b6-92e0-da12b1619431.png">
 
 ## Installation
 
