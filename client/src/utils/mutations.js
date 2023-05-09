@@ -3,7 +3,7 @@ import { gql } from '@apollo/client';
 //We need our 4 gql mutations we listed out login, add user, ssve book , and remove book
 
 export const LOGIN_USER = gql `
-    mutation loginUser($email: String!, password: String!){
+    mutation loginUser($email: String!, $password: String!){
         loginUser(email: $email, password: $password) {
             token
             user {
@@ -24,7 +24,7 @@ export const LOGIN_USER = gql `
 `
 
 export const ADD_USER = gql `
-    mutation addUser($username: String!, $email: String!, password: String!){
+    mutation addUser($username: String!, $email: String!, $password: String!){
         addUser(username: $username, email: $email, password: $password) {
             token
             user {
@@ -56,7 +56,7 @@ export const SAVE_BOOK = gql `
 
 export const REMOVE_BOOK = gql `
     mutation removeBook($userId: ID!, $book: BookInput!){
-        removeBook(email: $email, password: $password) {
+        removeBook(userId: $userId, book: $book) {
             _id
             username
             email 
